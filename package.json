@@ -11,7 +11,7 @@
     "type": "git",
     "url": "git+https://github.com/photonstorm/phaser3-project-template-custom-build.git"
   },
-  "author": "Richard Davey <rdavey@gmail.com> (http://www.photonstorm.com)",
+  "author": "Daniel Henri <djosephhenri@@gmail.com> (http://dhenri.me)",
   "license": "MIT",
   "licenseUrl": "http://www.opensource.org/licenses/mit-license.php",
   "bugs": {
