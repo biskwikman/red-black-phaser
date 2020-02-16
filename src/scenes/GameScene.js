@@ -9,6 +9,8 @@ export default class GameScene extends Phaser.Scene {
   }
 
   update(time, delta) {
+    //balconyEntrance.body.debugBodyColor = zone.body.touching.none ? 0x00ffff : 0xffff00;
+
     const speed = 130;
     const speedDiag = speed * (1/1.44);
     this.player.body.setVelocity(0);
@@ -88,6 +90,15 @@ export default class GameScene extends Phaser.Scene {
   create() {
     const room = this.add.image(600, 600, 'room');
     room.setScale(2, 2);
+
+    // Trying to get a zone to work for scene switching
+    /*var balconyEntrance;
+    balconyEntrance = this.add.zone(100, 100).setSize(200, 10).setVisible(true).setDepth(9999);
+    this.physics.world.enable(balconyEntrance);
+    balconyEntrance.body.setAllowGravity(false);
+    balconyEntrance.body.moves = false;
+    balconyEntrance.body.debugBodyColor = 'red';
+    balconyEntrance.body.debugShowBody = true;*/
 
     this.player = this.physics.add.sprite(100, 300, 'player', 0)
     this.player.setScale(2, 2);
