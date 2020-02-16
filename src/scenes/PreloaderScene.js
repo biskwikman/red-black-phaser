@@ -13,7 +13,7 @@ export default class PreloaderScene extends Phaser.Scene {
     progressBox.fillRect(240, 270, 320, 50);
 
     // load assets needed in game
-    this.load.spritesheet('player', 'assets/characters/main-char-sheet.png', {frameWidth: 32, frameHeight: 48});
+    this.load.spritesheet('player', 'assets/characters/main/main-char-sheet.png', {frameWidth: 32, frameHeight: 48});
     this.load.image('room', 'assets/environments/room.png');
 
     // emit signals detailing assets loaded
