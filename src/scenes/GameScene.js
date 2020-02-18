@@ -105,28 +105,30 @@ export default class GameScene extends Phaser.Scene {
 
     this.cursors = this.input.keyboard.createCursorKeys();
 
+    const fps = 4.5;
+
     this.anims.create({
       key: 'left',
       frames: this.anims.generateFrameNumbers('player', {frames: [3, 4]}),
-      frameRate: 4,
+      frameRate: fps,
       repeat: -1
     })
     this.anims.create({
       key: 'right',
       frames: this.anims.generateFrameNumbers('player', {frames: [5, 6]}),
-      frameRate: 4,
+      frameRate: fps,
       repeat: -1
     })
     this.anims.create({
       key: 'down',
       frames: this.anims.generateFrameNumbers('player', {frames: [0, 1, 0, 2]}),
-      frameRate: 4,
+      frameRate: fps,
       repeat: -1
     })
     this.anims.create({
       key: 'up',
       frames: this.anims.generateFrameNumbers('player', {frames: [7, 8, 7, 9]}),
-      frameRate: 4,
+      frameRate: fps,
       repeat: -1
     })
   }
