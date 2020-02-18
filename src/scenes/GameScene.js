@@ -92,13 +92,12 @@ export default class GameScene extends Phaser.Scene {
     room.setScale(2, 2);
 
     // Trying to get a zone to work for scene switching
-    /*var balconyEntrance;
+    var balconyEntrance;
     balconyEntrance = this.add.zone(100, 100).setSize(200, 10).setVisible(true).setDepth(9999);
     this.physics.world.enable(balconyEntrance);
     balconyEntrance.body.setAllowGravity(false);
     balconyEntrance.body.moves = false;
-    balconyEntrance.body.debugBodyColor = 'red';
-    balconyEntrance.body.debugShowBody = true;*/
+    //this.physics.add.overlap(this.player, balconyEntrance, this.onBalconyEntrance, false, this)
 
     this.player = this.physics.add.sprite(100, 300, 'player', 0)
     this.player.setScale(2, 2);
