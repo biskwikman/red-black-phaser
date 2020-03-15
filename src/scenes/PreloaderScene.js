@@ -15,6 +15,8 @@ export default class PreloaderScene extends Phaser.Scene {
     // load assets needed in game
     this.load.spritesheet('player', 'assets/characters/main/main-char-sheet.png', {frameWidth: 32, frameHeight: 48});
     this.load.image('room', 'assets/environments/room.png');
+    this.load.image('tiles', 'assets/environments/test/[Base]BaseChip_pipo.png');
+    this.load.tilemapTiledJSON('map', 'assets/environments/test/test.json');
 
     // emit signals detailing assets loaded
     this.load.on('progress', function (value) {
