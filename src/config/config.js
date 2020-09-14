@@ -1,8 +1,12 @@
 export default {
   type: Phaser.AUTO,
-  width: 800,
-  height: 600,
   backgroundColor: '#2d2d2d',
+  scale: {
+    mode: Phaser.Scale.FIT,
+    parent: 'test',
+    width: 400,
+    height: 300
+  },
   pixelArt: true,
   physics: {
     default: 'arcade',
