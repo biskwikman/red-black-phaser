@@ -12,11 +12,14 @@ export default class GameScene extends Phaser.Scene {
   }
 
   update() {
-    if (this.player.y < this.talker.y) {
-      this.player.depth = 1;
-    } else if (this.player.y > this.talker.y) {
-      this.player.depth = 3;
-    }
+    this.children.each(child => {
+      /** @type {Phaser.Physics.Arcade.Sprite} */
+      child.setDepth(child.y);
+    });
+
+    // console.log(this.player.body.blocked)
+    // console.log(this.player.body.overlapY)
+    // this.physics.world.on('collide', c => console.log(c))
   }
 
   create() {
@@ -36,7 +39,9 @@ export default class GameScene extends Phaser.Scene {
     this.player = new Player(this, 100, 300, 'player', 0);
     this.player.depth = 2;
 
-    this.physics.add.collider(this.player, [obstacles, this.talker]);
+    this.physics.add.collider(this.player, [obstacles, this.talker], (p, t) => console.log(t));
+    this.player.body.onCollide = true;
+    this.talker.body.onCollide = true; 
 
     console.log(this.player.depth, this.talker.depth);
   }
